@@ -51,7 +51,8 @@ def main() -> int:
     for path in documents:
         print(f"Обработка {path.name}...", flush=True)
         try:
-            actual = validate_document(texts[path.stem], extract_document(texts[path.stem]))
+            raw = extract_document(texts[path.stem])
+            actual = validate_document(texts[path.stem], raw)
         except (APIConnectionError, AuthenticationError, RateLimitError, OSError):
             print("API недоступен: соединение, ключ, квота или TLS-настройки. Оценка остановлена.")
             failed += 1
@@ -60,7 +61,14 @@ def main() -> int:
             print("Ошибка API, настроек или невалидный ответ; документ не оценён.")
             failed += 1
             continue
-        metrics = calculate_metrics(references[path.stem].model_dump(), actual.model_dump())
+        expected = references[path.stem].model_dump()
+        prediction = actual.model_dump()
+        for field, value in expected.items():
+            if value != prediction[field]:
+                print(f"  {field}: эталон={value!r}; результат={prediction[field]!r}")
+                if getattr(raw, field) != prediction[field]:
+                    print(f"    до валидации={getattr(raw, field)!r}")
+        metrics = calculate_metrics(expected, prediction)
         for field, counts in metrics.items():
             combined = totals.setdefault(field, dict.fromkeys(counts, 0))
             for metric, value in counts.items():
