@@ -8,6 +8,7 @@ from openai import APIConnectionError, APIError, AuthenticationError, RateLimitE
 from pydantic import ValidationError
 
 from extractor import extract_document
+from validators import validate_document
 
 
 def main() -> int:
@@ -30,7 +31,7 @@ def main() -> int:
         print(f"Ошибка: {error}", file=sys.stderr)
         return 1
     try:
-        result = extract_document(text)
+        result = validate_document(text, extract_document(text))
     except ValidationError:
         message = "Ответ модели не прошёл проверку схемы. Результат не выдан."
     except AuthenticationError:
