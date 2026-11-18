@@ -1,0 +1,23 @@
+{
+  "doc_type": "act",
+  "supplier_name": "ИП \"Ремонт\"",
+  "supplier_bin": null,
+  "doc_number": "R-8",
+  "doc_date": null,
+  "currency": "KZT",
+  "total_amount": 50000,
+  "vat_amount": null,
+  "line_items": [
+    {
+      "name": "Ремонт двери",
+      "qty": 1,
+      "price": 50000
+    }
+  ],
+  "field_confidence": {
+    "supplier_bin": 0.0
+  },
+  "warnings": [
+    "В документе разные даты составления; doc_date = null."
+  ]
+}

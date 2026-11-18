@@ -1,0 +1,23 @@
+{
+  "doc_type": "invoice",
+  "supplier_name": "ТОО \"Арна\"",
+  "supplier_bin": "210540001234",
+  "doc_number": "C-7",
+  "doc_date": "2026-11-15",
+  "currency": "KZT",
+  "total_amount": null,
+  "vat_amount": null,
+  "line_items": [
+    {
+      "name": "Стол",
+      "qty": 2,
+      "price": 50000
+    }
+  ],
+  "field_confidence": {
+    "supplier_bin": 1.0
+  },
+  "warnings": [
+    "В документе разные итоговые суммы; total_amount = null."
+  ]
+}

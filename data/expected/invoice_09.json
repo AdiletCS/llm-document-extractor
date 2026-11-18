@@ -1,0 +1,23 @@
+{
+  "doc_type": "invoice",
+  "supplier_name": "ЖШС \"Алтын Жол\"",
+  "supplier_bin": null,
+  "doc_number": "Q-9",
+  "doc_date": "2026-11-16",
+  "currency": "KZT",
+  "total_amount": 125000,
+  "vat_amount": 0,
+  "line_items": [
+    {
+      "name": "Жеткізу / Доставка",
+      "qty": 1,
+      "price": 125000
+    }
+  ],
+  "field_confidence": {
+    "supplier_bin": 0.0
+  },
+  "warnings": [
+    "Рядом с меткой БИН/БСН не найдены однозначные 12 цифр."
+  ]
+}

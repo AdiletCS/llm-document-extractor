@@ -1,0 +1,21 @@
+{
+  "doc_type": "invoice",
+  "supplier_name": "ТОО \"Облако\"",
+  "supplier_bin": null,
+  "doc_number": null,
+  "doc_date": null,
+  "currency": "USD",
+  "total_amount": 100,
+  "vat_amount": null,
+  "line_items": [
+    {
+      "name": "Лицензия",
+      "qty": 4,
+      "price": 25
+    }
+  ],
+  "field_confidence": {
+    "supplier_bin": 0.0
+  },
+  "warnings": []
+}

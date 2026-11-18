@@ -1,0 +1,21 @@
+{
+  "doc_type": "act",
+  "supplier_name": "ТОО \"Вектор Сервис\"",
+  "supplier_bin": "220140001234",
+  "doc_number": "A-14",
+  "doc_date": "2026-11-14",
+  "currency": "EUR",
+  "total_amount": 600,
+  "vat_amount": null,
+  "line_items": [
+    {
+      "name": "Аудит системы",
+      "qty": 2,
+      "price": 300
+    }
+  ],
+  "field_confidence": {
+    "supplier_bin": 1.0
+  },
+  "warnings": []
+}

@@ -1,0 +1,21 @@
+{
+  "doc_type": "invoice",
+  "supplier_name": "ИП \"Тілмаш\"",
+  "supplier_bin": "200640001234",
+  "doc_number": "W-10",
+  "doc_date": "2026-11-17",
+  "currency": "KZT",
+  "total_amount": 120000,
+  "vat_amount": null,
+  "line_items": [
+    {
+      "name": "Перевод договора",
+      "qty": 1,
+      "price": null
+    }
+  ],
+  "field_confidence": {
+    "supplier_bin": 1.0
+  },
+  "warnings": []
+}
